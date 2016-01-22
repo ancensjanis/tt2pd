@@ -15,6 +15,39 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('hello', 'HelloController@hello');
+
+Route::get('discussions/{user?}', ['uses' => 'DiscussionController@byUser']);
+
+
+//Route::controller('auth', 'Auth\AuthController');
+//Route::controller('discussion', 'DiscussionController');
+//Route::controller('comment', 'ComentController');
+//Route::controller('admin', 'AdminController');
+//Route::controller('keyword', 'KeywordController');
+//Route::get('user', ['middleware' => 'auth', function() {
+    //return view('user');
+//}]);
+
+
+// Authentication routes...
+//Route::get('auth/login', 'Auth\AuthController@getLogin');
+//Route::post('auth/login', 'Auth\AuthController@postLogin');
+//Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+//Route::get('auth/register', 'Auth\AuthController@getRegister');
+//Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+//
+/*
+Route:: group(array('before' => 'guest', function () {
+    Rout::get('user/register', 'UserController@getRegister');
+    Rout::get('user/login', 'UserController@getLogin');
+}));
+*/
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,7 +58,7 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
+/*
 Route::group(['middleware' => ['web']], function () {
     //
-});
+});*/
