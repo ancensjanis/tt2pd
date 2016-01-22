@@ -7,5 +7,5 @@
 
 @section('content')
     <h1>Discussions</h1>
-    <pre>a</pre>
+
 @stop
